@@ -1,18 +1,20 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+# Premier League application
 
-# WTF Webpack Starter Kit 
+Simple application which shows basic information about Premier League clubs like stadion, date of creation, current players, etc.
 
-Simple toolkit for your static websites development.
+## Motivation
+
+I like watching football a lot. My most favorite football league is Premier League, so I have searched API which can give me necessary data, and I have started to create the application. I am very interesting of the results of my work ;).
+
+## What I use?
+
+The API which I use is a free, and [here it is](https://www.football-data.org/). In additional I  use [webpack starter kit](https://github.com/maciejkorsan/wtf-webpack-starter) created by [Maciej Korsan](https://www.facebook.com/korsanpl/).
 
 ## How to use it?
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+Pending... ⌛
 
-## Available scripts
+## License
 
-`npm run start` - runs development mode
-
-`npm run build` - runs build process for production
-
-`npm run publish` - runs build process and publish the page using `gh-pages` branch
+This project is licensed under the MIT License.
 
