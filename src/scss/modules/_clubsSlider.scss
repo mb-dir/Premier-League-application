@@ -12,3 +12,14 @@
         border: 1px solid $border-color;
     }
 }
+@media(min-width: 768px){
+    .clubsSlider{
+        height: 120px;
+        width: 80%;
+        margin: 0 auto;
+        &__clubsWrapper {
+            height: 75%;
+            width: 75%;
+        }
+    }
+}

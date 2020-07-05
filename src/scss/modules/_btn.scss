@@ -5,3 +5,8 @@
     border-radius: 5px;
     padding: 2px 8px;
 }
+@media(min-width: 768px) {
+    .btn{
+        padding: 2px 12px;
+    }
+}
