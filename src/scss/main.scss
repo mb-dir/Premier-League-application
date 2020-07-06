@@ -1,12 +1,8 @@
 @import "~normalize.css";
 
 @import "_variables";
-
-body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
+@import "./modules/_base";
+@import "./modules/_btn.scss";
+@import "./modules/_list.scss";
+@import "./modules/_clubsSlider.scss";
+@import "./modules/_clubsInfo.scss";
