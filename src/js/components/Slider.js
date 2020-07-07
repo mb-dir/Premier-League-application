@@ -1,6 +1,8 @@
 class Slider{
-    constructor(){
-
+    constructor(sliderWrapper, sliderBtnPrev, sliderBtnNext){
+        this.sliderWrapper = sliderWrapper;
+        this.sliderBtnPrev = sliderBtnPrev;
+        this.sliderBtnNext = sliderBtnNext;
     }
 }
 
