@@ -7,3 +7,9 @@ import Slider from './components/Slider.js';
 registerSW();
 
 /* place your code below */
+
+//variables related with DOM
+
+const sliderWrapper = document.querySelector('#sliderWrapper');
+const btnPrev = document.querySelector('#btnPrev');
+const btnNext = document.querySelector('#btnNext');
