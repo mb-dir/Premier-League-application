@@ -13,3 +13,6 @@ registerSW();
 const sliderWrapper = document.querySelector('#sliderWrapper');
 const btnPrev = document.querySelector('#btnPrev');
 const btnNext = document.querySelector('#btnNext');
+
+//components handling
+const clubsSlider = new Slider(sliderWrapper, btnPrev, btnNext)
