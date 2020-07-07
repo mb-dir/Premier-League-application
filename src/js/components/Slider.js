@@ -1,3 +1,5 @@
+import regeneratorRuntime from "regenerator-runtime";
+import {API_TOKEN} from "../config.js";
 class Slider{
     constructor(sliderWrapper, sliderBtnPrev, sliderBtnNext){
         //properties related with DOM
