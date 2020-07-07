@@ -7,5 +7,3 @@ import Slider from './components/Slider.js';
 registerSW();
 
 /* place your code below */
-
-console.log('HELLO 🚀')
