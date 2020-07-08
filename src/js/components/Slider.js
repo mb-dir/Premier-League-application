@@ -35,7 +35,10 @@ class Slider{
             const {teams} = clubsRes;
             
             for(const club of teams){
-                console.log(club)
+                const clubCrest = document.createElement('img');
+                clubCrest.src = club.crestUrl;
+
+                this.sliderWrapper.appendChild(clubCrest)
             }
         });
     }
