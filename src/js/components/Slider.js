@@ -11,7 +11,7 @@ class Slider{
         this.API_KEY = 'https://api.football-data.org/v2/competitions/PL/teams';
 
         //calling methods - now it is very helpful at development
-        this.getClubs();
+        this.drawClubs();
     }
 
     async getClubs(){
