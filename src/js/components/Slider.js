@@ -13,23 +13,21 @@ class Slider{
         //calling methods - now it is very helpful at development
         this.getClubs();
     }
-    getClubs(){
 
-        //auxiliary async function
-        async function getClubsFromAPI(API_KEY){
-            try{
-                const clubsRespone = await fetch(API_KEY, {
-                    "method": "GET",
-                    "headers": {
-                        "X-Auth-Token": API_TOKEN,
-                    }
-                })
-                const clubsData = await clubsRespone.json();
-                return clubsData;
-            }catch(err){
-                throw new Error(err);
-            }
+    async getClubs(){
+        try{
+            const clubsRespone = await fetch(this.API_KEY, {
+                "method": "GET",
+                "headers": {
+                    "X-Auth-Token": API_TOKEN,
+                }
+            })
+            const clubsData = await clubsRespone.json();
+            return clubsData;
+        }catch(err){
+            throw new Error(err);
         }
+    }
 
         getClubsFromAPI(this.API_KEY).then((clubsRes) => {
             const {teams} = clubsRes;
