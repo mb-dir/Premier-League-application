@@ -29,10 +29,14 @@ class Slider{
         }
     }
 
-        getClubsFromAPI(this.API_KEY).then((clubsRes) => {
-            const {teams} = clubsRes;
+    drawClubs(){
+        this.getClubs().then((clubsRes)=>{
             //it is an array of all PL clubs
-            return teams;
+            const {teams} = clubsRes;
+            
+            for(const club of teams){
+                console.log(club)
+            }
         });
     }
 }
