@@ -10,8 +10,12 @@ class Slider{
         //properties related with data
         this.API_KEY = 'https://api.football-data.org/v2/competitions/PL/teams';
 
+        //properites related with class
+        this.scrollPosition = 0;//This properties is use in buttons handling
+
         //calling methods - now it is very helpful at development
         this.drawClubs();
+        this.buttonsHandling()
     }
 
     async getClubs(){
@@ -41,6 +45,26 @@ class Slider{
 
                 this.sliderWrapper.appendChild(clubCrest)
             }
+        });
+    }
+
+    //buttons handling
+    buttonsHandling(){
+        //150 is a conventional value - imo it looks good with 150 px offset
+        this.sliderBtnNext.addEventListener('click', ()=>{
+            this.scrollPosition = this.sliderWrapper.scrollLeft + 150;
+            this.sliderWrapper.scrollTo({
+                left: this.scrollPosition,
+                behavior: 'smooth',
+            });
+        });
+
+        this.sliderBtnPrev.addEventListener('click', () => {
+            this.scrollPosition = this.sliderWrapper.scrollLeft - 150;
+            this.sliderWrapper.scrollTo({
+                left: this.scrollPosition,
+                behavior: 'smooth',
+            });
         });
     }
 }
