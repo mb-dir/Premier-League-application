@@ -7,11 +7,14 @@
     justify-content: space-evenly;
     align-items: center;
     &__clubsWrapper{
-        overflow-x: scroll;
         height: 80%;
         width: 65%;
         border: 1px solid $border-color;
         display: flex;
+    }
+    &__roll{
+        display: flex;
+        overflow-x: scroll;
     }
     &__crest{
         height: 100%;
