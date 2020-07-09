@@ -36,6 +36,7 @@ class Slider{
             
             for(const club of teams){
                 const clubCrest = document.createElement('img');
+                clubCrest.classList.add("clubsSlider__crest");
                 clubCrest.src = club.crestUrl;
 
                 this.sliderWrapper.appendChild(clubCrest)
