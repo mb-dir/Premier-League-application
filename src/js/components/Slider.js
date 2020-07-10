@@ -37,11 +37,13 @@ class Slider{
         this.getClubs().then((clubsRes)=>{
             //it is an array of all PL clubs
             const {teams} = clubsRes;
-            
             for(const club of teams){
+                const {id} = club; 
                 const clubCrest = document.createElement('img');
+                
                 clubCrest.classList.add("clubsSlider__crest");
                 clubCrest.src = club.crestUrl;
+                clubCrest.dataset.clubId = id;
 
                 this.sliderWrapper.appendChild(clubCrest);
             }
