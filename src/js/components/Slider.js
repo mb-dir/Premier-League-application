@@ -15,7 +15,7 @@ class Slider{
 
         //calling methods - now it is very helpful at development
         this.drawClubs();
-        this.buttonsHandling()
+        this.buttonsHandling();
     }
 
     async getClubs(){
@@ -43,7 +43,7 @@ class Slider{
                 clubCrest.classList.add("clubsSlider__crest");
                 clubCrest.src = club.crestUrl;
 
-                this.sliderWrapper.appendChild(clubCrest)
+                this.sliderWrapper.appendChild(clubCrest);
             }
         });
     }
