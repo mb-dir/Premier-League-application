@@ -72,11 +72,6 @@ module.exports = {
           },
         },
       ],
-      patterns: [
-        {
-          from: "src/assets",
-        },
-      ],
     }),
 
     /* here you can define another html file and its dependencies */
