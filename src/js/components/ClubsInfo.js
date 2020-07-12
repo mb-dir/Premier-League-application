@@ -17,7 +17,9 @@ class ClubsInfo{
             const {target} = e;
             const clubID = target.dataset.clubId;
 
-            console.log(target);
+            this.getClubInfo(clubID).then((clubInfoRes)=>{
+                console.log(clubInfoRes)
+            });
         });
     }
     async getClubInfo(clubID){
