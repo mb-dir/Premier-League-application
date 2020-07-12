@@ -14,5 +14,7 @@ const sliderWrapper = document.querySelector('#sliderWrapper');
 const btnPrev = document.querySelector('#btnPrev');
 const btnNext = document.querySelector('#btnNext');
 
+const clubsInfoWrapper = document.querySelector('#clubsInfoWrapper');
+
 //components handling
 const clubsSlider = new Slider(sliderWrapper, btnPrev, btnNext);
