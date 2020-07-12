@@ -1,6 +1,6 @@
 class ClassInfo{
-    constructor(){
-
+    constructor(clubsInfoWrapper) {
+        this.clubsInfoWrapper = clubsInfoWrapper;
     }
 }
 
