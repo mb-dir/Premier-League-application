@@ -15,6 +15,7 @@ class ClubsInfo{
     crestClickHandling(){
         this.sliderWrapper.addEventListener('click', (e)=>{
             const {target} = e;
+            const clubID = target.dataset.clubId;
 
             console.log(target);
         });
