@@ -1,8 +1,10 @@
 class ClubsInfo{
     constructor(clubsInfoWrapper, sliderWrapper) {
+        //properties related with DOM
         this.clubsInfoWrapper = clubsInfoWrapper;
         this.sliderWrapper = sliderWrapper;
 
+        //calling methods
         this.crestClickHandling();
     }
 
