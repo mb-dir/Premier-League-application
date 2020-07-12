@@ -1,7 +1,8 @@
-class ClassInfo{
-    constructor(clubsInfoWrapper) {
+class ClubsInfo{
+    constructor(clubsInfoWrapper, sliderWrapper) {
         this.clubsInfoWrapper = clubsInfoWrapper;
+        this.sliderWrapper = sliderWrapper;
     }
 }
 
-export default ClassInfo;
+export default ClubsInfo;
