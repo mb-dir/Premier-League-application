@@ -22,7 +22,7 @@ class ClubsInfo{
     }
     drawClubInfoContent(clubID){
         this.getClubInfo(clubID).then((clubInfoRes) => {
-            console.log(clubInfoRes);
+            const {address, clubColors, crestUrl, email, name, venue, website} = clubInfoRes;
         });       
     }
     async getClubInfo(clubID){
