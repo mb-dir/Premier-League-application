@@ -32,6 +32,10 @@ class ClubsInfo{
             //WRAPPER - div
             const wrapper = document.createElement('div');
             wrapper.classList.add('clubsInfo__wrapper');
+
+            //ARTICLE(clubInfo) - article
+            const clubsInfoArticle = document.createElement('article');
+            clubsInfoArticle.classList.add('clubsInfo__clubInfo');
         });       
     }
     async getClubInfo(clubID){
