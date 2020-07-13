@@ -25,9 +25,9 @@ class ClubsInfo{
             const {address, clubColors, crestUrl, email, name, venue, website} = clubInfoRes;
 
             //HEADER - h2
-            const header = document.createElement('h2');
-            header.classList.add('clubsInfo__clubName');
-            header.textContent = name;
+            const clubNameHeader = document.createElement('h2');
+            clubNameHeader.classList.add('clubsInfo__clubName');
+            clubNameHeader.textContent = name;
         });       
     }
     async getClubInfo(clubID){
