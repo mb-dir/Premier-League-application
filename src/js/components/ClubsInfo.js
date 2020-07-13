@@ -28,6 +28,10 @@ class ClubsInfo{
             const clubNameHeader = document.createElement('h2');
             clubNameHeader.classList.add('clubsInfo__clubName');
             clubNameHeader.textContent = name;
+
+            //WRAPPER - div
+            const wrapper = document.createElement('div');
+            wrapper.classList.add('clubsInfo__wrapper');
         });       
     }
     async getClubInfo(clubID){
