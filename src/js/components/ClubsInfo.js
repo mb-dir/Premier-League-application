@@ -17,10 +17,13 @@ class ClubsInfo{
             const {target} = e;
             const clubID = target.dataset.clubId;
 
-            this.getClubInfo(clubID).then((clubInfoRes)=>{
-                console.log(clubInfoRes)
-            });
+            this.drawClubInfoContent(clubID);
         });
+    }
+    drawClubInfoContent(clubID){
+        this.getClubInfo(clubID).then((clubInfoRes) => {
+            console.log(clubInfoRes);
+        });       
     }
     async getClubInfo(clubID){
         const API_KEY = `${this.API}${clubID}`
