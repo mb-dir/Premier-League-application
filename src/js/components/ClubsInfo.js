@@ -23,6 +23,11 @@ class ClubsInfo{
     drawClubInfoContent(clubID){
         this.getClubInfo(clubID).then((clubInfoRes) => {
             const {address, clubColors, crestUrl, email, name, venue, website} = clubInfoRes;
+
+            //HEADER - h2
+            const header = document.createElement('h2');
+            header.classList.add('clubsInfo__clubName');
+            header.textContent = name;
         });       
     }
     async getClubInfo(clubID){
