@@ -21,8 +21,25 @@ class ClubsInfo{
         });
     }
     drawClubInfoContent(clubID){
+        //Handling the asnync method
         this.getClubInfo(clubID).then((clubInfoRes) => {
-            const {address, clubColors, crestUrl, email, name, venue, website} = clubInfoRes;
+            //Clearing all contents before adding the next one
+            this.clubsInfoWrapper.innerHTML = '';
+
+            const {address, clubColors, crestUrl, email, name, venue, website, squad} = clubInfoRes;//squad is an array
+
+            //Object which will be passed to the function which create an article content
+            const informationObject = {
+                address,
+                clubColors, 
+                crestUrl, 
+                email, 
+                name, 
+                venue, 
+                website,
+            }
+
+            /*CREATEING THE STRUCTURE ELEMENTS*/
 
             //HEADER - h2
             const clubNameHeader = document.createElement('h2');
@@ -36,6 +53,99 @@ class ClubsInfo{
             //ARTICLE(clubInfo) - article
             const clubsInfoArticle = document.createElement('article');
             clubsInfoArticle.classList.add('clubsInfo__clubInfo');
+
+            //ARTICLE(squad) - article
+            const clubsSquadArticle = document.createElement('article');
+            clubsSquadArticle.classList.add('clubsInfo__squad');
+
+            /*THE TWO FOLLOWING ELEMENTS ARE CREATED WITH THE SPECIAL FUNCTION*/
+
+            const informationArticle = createArticleInside(clubsInfoArticle, "information", "infoList", informationObject);
+            const squadArticle = createArticleInside(clubsSquadArticle, "squad", "squad", squad);
+
+            this.clubsInfoWrapper.appendChild(clubNameHeader);
+            wrapper.appendChild(informationArticle);
+            wrapper.appendChild(squadArticle);
+            this.clubsInfoWrapper.appendChild(wrapper);
+
+
+            //an auxiliary function to create the inside content of the single article
+            //articleContainer - container for the article content
+            //headerMessage - title of the article
+            //listClass - name of css class shich will be added to ul(informationList)
+            //data - object witch data about the club(in this case a special object(informationObject) or an array(squad))
+            function createArticleInside(articleContainer, headerMessage, listClass, data) {
+                //ARTICLE HEADER - h3
+                const articleHeader = document.createElement('h3');
+                articleHeader.classList.add('clubsInfo__header');
+                articleHeader.textContent = headerMessage;
+
+                //LIST - ul
+                const informationList = document.createElement('ul');
+                informationList.classList.add('list');
+                informationList.classList.add(`clubsInfo__${listClass}`);
+
+                //LIST ITEM - li - iteration through all informations about the club and creating (based on this informations) lists item
+                //if data is an array that means that we have to create the team sheet
+                if (Array.isArray(data)){
+                    if (data.length === 0){
+                        informationList.textContent = "Sorry, we cannot show you the players";
+                    }else{
+                        for (const info of data) {
+                            const listItem = document.createElement('li');
+
+                            listItem.classList.add('list__item');
+                            listItem.classList.add('clubsInfo__squad');
+
+                            listItem.textContent = info;
+
+                            informationList.appendChild(listItem);
+                        }
+                    }
+                    //In the other case we create the list with informations
+                }else{
+                    for (const key of Object.keys(data)) {
+                        //If something does not extist we go to the next iteration
+                        if (data[key] === null) {
+                            continue;
+                        }
+
+                        const listItem = document.createElement('li');
+
+                        listItem.classList.add('list__item');
+                        listItem.classList.add('clubsInfo__info');
+
+                        //SPECIAL CASES
+                        if(key === 'crestUrl'){
+                            listItem.classList.add('clubsInfo__clubInfo--crest');
+
+                            const crest = document.createElement('img');
+
+                            crest.classList.add('list__crest');
+                            crest.src = data[key];
+
+                            listItem.textContent = 'crest:';
+                            listItem.appendChild(crest);
+                        } else if (key === 'website'){
+                            const websiteLink = document.createElement('a');
+
+                            websiteLink.classList.add('link');
+                            websiteLink.href = data[key];
+                            websiteLink.target = '_blank';
+                            websiteLink.textContent = 'website';
+
+                            listItem.appendChild(websiteLink);
+                        }else{//NORMAL CASE
+                            listItem.textContent = `${key}: ${data[key]}`;
+                        }
+                        informationList.appendChild(listItem);
+                    }
+                }
+                //to the article container we append the header(previously created) and the information list
+                articleContainer.appendChild(articleHeader);
+                articleContainer.appendChild(informationList);
+                return articleContainer;       
+            }
         });       
     }
     async getClubInfo(clubID){
