@@ -4,13 +4,17 @@
         display: flex;
         justify-content: space-evenly;
     }
-}
-@media(min-width: 568px){
-    .clubsInfo{
-        &__clubInfo{
-            width: 50%;
+    &__clubInfo {
+        width: 50%;
+        &--crest {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
+    &__squad{
+        width: 50%;
+    }   
 }
 @media(min-width: 768px) {
     .clubsInfo{
