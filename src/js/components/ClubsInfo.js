@@ -37,7 +37,7 @@ class ClubsInfo{
                 name, 
                 venue, 
                 website,
-            }
+            };
 
             /*CREATEING THE STRUCTURE ELEMENTS*/
 
@@ -156,7 +156,7 @@ class ClubsInfo{
         });       
     }
     async getClubInfo(clubID){
-        const API_KEY = `${this.API}${clubID}`
+        const API_KEY = `${this.API}${clubID}`;
          try {
              const clubInfoRespone = await fetch(API_KEY, {
                  "method": "GET",
