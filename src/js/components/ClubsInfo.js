@@ -88,8 +88,15 @@ class ClubsInfo{
                 //LIST ITEM - li - iteration through all informations about the club and creating (based on this informations) lists item
                 //if data is an array that means that we have to create the team sheet
                 if (Array.isArray(data)){
+                    //If array's length === 0 that means the API does not deliver us the squad
                     if (data.length === 0){
-                        informationList.textContent = "Sorry, we cannot show you the players";
+                        const errorInfo = document.createElement('span');
+                        errorInfo.classList.add('errorInfo');
+                        errorInfo.textContent = 'Sorry, the squad are not available now';
+
+                        articleContainer.appendChild(articleHeader);
+                        articleContainer.appendChild(errorInfo);
+                        return articleContainer; 
                     }else{
                         for (const info of data) {
                             const listItem = document.createElement('li');
