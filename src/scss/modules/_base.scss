@@ -9,3 +9,10 @@ body{
     background-size: cover;
     text-align: center;
 }
+.link{
+    text-decoration: none;
+    color: $text-color;
+    &:hover{
+        color: darken($text-color, 25%);
+    }
+}
