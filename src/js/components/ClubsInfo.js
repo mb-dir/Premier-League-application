@@ -99,14 +99,17 @@ class ClubsInfo{
                         return articleContainer; 
                     }else{
                         for (const info of data) {
-                            const listItem = document.createElement('li');
+                            const {name, role} = info;
+                            if(role === "PLAYER"){
+                                const listItem = document.createElement('li');
 
-                            listItem.classList.add('list__item');
-                            listItem.classList.add('clubsInfo__squad');
+                                listItem.classList.add('list__item');
+                                listItem.classList.add('clubsInfo__squad');
 
-                            listItem.textContent = info;
+                                listItem.textContent = name;
 
-                            informationList.appendChild(listItem);
+                                informationList.appendChild(listItem);
+                            }
                         }
                     }
                     //In the other case we create the list with informations
