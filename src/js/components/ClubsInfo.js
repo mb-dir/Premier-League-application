@@ -98,14 +98,14 @@ class ClubsInfo{
                         articleContainer.appendChild(errorInfo);
                         return articleContainer; 
                     }else{
-                        console.log(data)
                         for (const info of data) {
+                            const {name} = info;
                             const listItem = document.createElement('li');
 
                             listItem.classList.add('list__item');
                             listItem.classList.add('clubsInfo__squad');
 
-                            listItem.textContent = info;
+                            listItem.textContent = name;
 
                             informationList.appendChild(listItem);
                         }
