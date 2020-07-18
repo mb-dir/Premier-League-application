@@ -98,6 +98,7 @@ class ClubsInfo{
                         articleContainer.appendChild(errorInfo);
                         return articleContainer; 
                     }else{
+                        console.log(data)
                         for (const info of data) {
                             const listItem = document.createElement('li');
 
