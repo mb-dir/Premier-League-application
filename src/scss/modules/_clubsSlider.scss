@@ -4,7 +4,7 @@
     border: 3px solid $border-color;
     border-radius: 5px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     &__clubsWrapper{
         height: 80%;
@@ -30,5 +30,12 @@
             height: 75%;
             width: 75%;
         }
+    }
+}
+
+// this part of code is related with an issue with flexbox(space-evenly) in edge. The solution which I have used - https://stackoverflow.com/questions/54882531/how-to-detect-partial-support-for-space-evenly-in-edge
+@supports not (-ms-ime-align: auto) {
+    .clubsSlider {
+        justify-content: space-evenly
     }
 }
