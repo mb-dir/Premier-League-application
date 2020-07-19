@@ -104,7 +104,7 @@ class ClubsInfo{
                                 const listItem = document.createElement('li');
 
                                 listItem.classList.add('list__item');
-                                listItem.classList.add('clubsInfo__squad');
+                                listItem.classList.add('clubsInfo__player');
 
                                 listItem.textContent = name;
 
