@@ -61,7 +61,7 @@ class ClubsInfo{
             /*THE TWO FOLLOWING ELEMENTS ARE CREATED WITH THE SPECIAL FUNCTION*/
 
             const informationArticle = createArticleInside(clubsInfoArticle, "information", "infoList", informationObject);
-            const squadArticle = createArticleInside(clubsSquadArticle, "squad", "squad", squad);
+            const squadArticle = createArticleInside(clubsSquadArticle, "squad", "squadList", squad);
 
             this.clubsInfoWrapper.appendChild(clubNameHeader);
             wrapper.appendChild(informationArticle);
