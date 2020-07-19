@@ -1,8 +1,16 @@
 .clubsInfo{
     margin-top: 20px;
+    &__clubName{
+        font-size: $large;
+        margin: .3em 0;
+    }
     &__wrapper{
         display: flex;
         flex-wrap: wrap;
+    }
+    &__header{
+        font-size: $medium;
+        margin: .5em 0;
     }
     &__clubInfo {
         width: 100%;
