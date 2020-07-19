@@ -14,7 +14,16 @@
     }
     &__squad{
         width: 50%;
-    }   
+    }
+    &__squadList {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    &__player{
+        margin: 5px 0;
+    }
 }
 @media(min-width: 768px) {
     .clubsInfo{
