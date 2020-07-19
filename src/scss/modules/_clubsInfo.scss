@@ -30,6 +30,7 @@
         flex-wrap: wrap;
     }
     &__player{
+        font-size: $xs;
         margin: 5px 0;
     }
 }
@@ -37,5 +38,8 @@
     .clubsInfo{
         width: 80%;
         margin: 20px auto;
+        &__player {
+            font-size: $small;
+        }
     }
 }
