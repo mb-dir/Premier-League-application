@@ -1,4 +1,10 @@
 import regeneratorRuntime from "regenerator-runtime";
+
+//https://www.npmjs.com/package/smoothscroll-polyfill
+import smoothscroll from 'smoothscroll-polyfill';
+// kick off the polyfill!
+smoothscroll.polyfill();
+
 import {API_TOKEN} from "../config.js";
 class Slider{
     constructor(sliderWrapper, sliderBtnPrev, sliderBtnNext){
