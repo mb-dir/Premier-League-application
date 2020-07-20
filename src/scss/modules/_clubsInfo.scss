@@ -1,11 +1,19 @@
 .clubsInfo{
     margin-top: 20px;
+    &__clubName{
+        font-size: $large;
+        margin: .3em 0;
+    }
     &__wrapper{
         display: flex;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    &__header{
+        font-size: $medium;
+        margin: .5em 0;
     }
     &__clubInfo {
-        width: 50%;
+        width: 100%;
         &--crest {
             display: flex;
             justify-content: center;
@@ -13,12 +21,28 @@
         }
     }
     &__squad{
-        width: 50%;
-    }   
+        width: 100%;
+    }
+    &__squadList {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    &__player{
+        font-size: $xs;
+        margin: 5px 0;
+    }
 }
 @media(min-width: 768px) {
     .clubsInfo{
         width: 80%;
         margin: 20px auto;
+        &__squadList {
+            height: 600px;
+        }
+        &__player {
+            font-size: $small;
+        }
     }
 }
