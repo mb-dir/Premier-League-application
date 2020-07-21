@@ -33,9 +33,9 @@ The following instructions will allow you to work with the copy of the project.
 
 To the application works correctly you have to create a file called "config.js" in `src/js` and in this file create a variable called `API_TOKEN` with the api token from [here](https://www.football-data.org/), what is more you must export this variable. So the file structure should look like below
 
-![example files structure](https://raw.githubusercontent.com/mb-dir/Premier-League-application/master/src/assets/example_file_structure/files_structure.png)
+![example files structure](https://raw.githubusercontent.com/mb-dir/Premier-League-application/master/src/assets/img/example_file_structure/files_structure.PNG)
 
-![example file content](https://raw.githubusercontent.com/mb-dir/Premier-League-application/master/src/assets/example_file_structure/token.png)
+![example file content](https://raw.githubusercontent.com/mb-dir/Premier-League-application/master/src/assets/img/example_file_structure/token.PNG)
 
 Such a file structure should provide that the application will work without any problems.
 
