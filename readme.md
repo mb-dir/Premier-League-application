@@ -51,7 +51,7 @@ Such a file structure should provide that the application will work without any 
 
         npm run publish
 
-The above scripts are from [this starter kit]("https://github.com/maciejkorsan/wtf-webpack-starter").
+The above scripts are from [this starter kit](https://github.com/maciejkorsan/wtf-webpack-starter).
 
 
 
