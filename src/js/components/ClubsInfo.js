@@ -134,7 +134,7 @@ class ClubsInfo{
                             crest.classList.add('list__crest');
                             crest.src = data[key];
 
-                            listItem.textContent = 'crest:';
+                            listItem.innerHTML = '<b>crest:</b>';
                             listItem.appendChild(crest);
                         } else if (key === 'website'){
                             const websiteLink = document.createElement('a');
@@ -146,7 +146,7 @@ class ClubsInfo{
 
                             listItem.appendChild(websiteLink);
                         }else{//NORMAL CASE
-                            listItem.textContent = `${key}: ${data[key]}`;
+                            listItem.innerHTML = `<b>${key}</b>: ${data[key]}`;
                         }
                         informationList.appendChild(listItem);
                     }
