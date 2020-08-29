@@ -133,6 +133,7 @@ class ClubsInfo{
 
                             crest.classList.add('list__crest');
                             crest.src = data[key];
+                            crest.alt = `${data.name} crest`;
 
                             listItem.innerHTML = '<b>crest:</b>';
                             listItem.appendChild(crest);
