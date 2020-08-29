@@ -130,10 +130,10 @@ class ClubsInfo{
                             listItem.classList.add('clubsInfo__clubInfo--crest');
 
                             const crest = document.createElement('img');
-
+                            const {name} = data;
                             crest.classList.add('list__crest');
                             crest.src = data[key];
-                            crest.alt = `${data.name} crest`;
+                            crest.alt = `${name} crest`;
 
                             listItem.innerHTML = '<b>crest:</b>';
                             listItem.appendChild(crest);
