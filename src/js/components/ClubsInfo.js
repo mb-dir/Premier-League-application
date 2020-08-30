@@ -139,10 +139,12 @@ class ClubsInfo{
                             listItem.appendChild(crest);
                         } else if (key === 'website'){
                             const websiteLink = document.createElement('a');
+                            const {name} = data;
 
                             websiteLink.classList.add('link');
                             websiteLink.href = data[key];
                             websiteLink.target = '_blank';
+                            websiteLink.title = `Link to ${name} website`;
                             websiteLink.textContent = 'website';
 
                             listItem.appendChild(websiteLink);
