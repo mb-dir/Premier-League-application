@@ -44,12 +44,13 @@ class Slider{
             //it is an array of all PL clubs
             const {teams} = clubsRes;
             for(const club of teams){
-                const {id} = club; 
+                const {id, name} = club; 
                 const clubCrest = document.createElement('img');
-                
+
                 clubCrest.classList.add("clubsSlider__crest");
                 clubCrest.src = club.crestUrl;
                 clubCrest.dataset.clubId = id;
+                clubCrest.alt = `${name} crest`;
 
                 this.sliderWrapper.appendChild(clubCrest);
             }
