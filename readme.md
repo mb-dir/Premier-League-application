@@ -53,7 +53,15 @@ Such a file structure should provide that the application will work without any 
 
 The above scripts are from [this starter kit](https://github.com/maciejkorsan/wtf-webpack-starter).
 
+## My comments
 
+- The API has delivered clubs crests in .png but for some time delivers in .svg format, so there is the white background. It does not look pretty, but still works.
+
+- The history of this project is not perfect. I could add more tags to the history was clearer, pushing changes like update readme directly to master branch was not the best idea, what is more sometimes I could write more accurate commits message.
+
+- For me the structure of this project is fine. I mean it is not too complicated and not too divided.
+
+- `drawClubInfoContent` method in `ClubsInfo.js` is large, but synchronising data with view with the use DOM is not so easy, and I have not wanted to use template literals too much.
 
 ## License
 
