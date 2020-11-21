@@ -12,7 +12,12 @@
         height: 0;
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
-        border-right: 10px solid $border-color;
+        &--left{
+            border-right: 10px solid $border-color;
+        }
+        &--right{
+            border-left: 10px solid $border-color;
+        }
     }
     &__clubsWrapper{
         height: 80%;
