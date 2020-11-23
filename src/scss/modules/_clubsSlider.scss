@@ -6,6 +6,19 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    // styles from here - https://css-tricks.com/snippets/css/css-triangle/
+    &__arrowBtn{
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        &--left{
+            border-right: 10px solid $border-color;
+        }
+        &--right{
+            border-left: 10px solid $border-color;
+        }
+    }
     &__clubsWrapper{
         height: 80%;
         width: 65%;
@@ -20,6 +33,9 @@
     &__crest{
         height: 100%;
         padding: 5px;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 @media(min-width: 768px){
