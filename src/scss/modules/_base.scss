@@ -5,7 +5,8 @@ body{
     min-height: 100vh;
     color: $text-color;
     font-family: $default-font;
-    background: url($bg-img) no-repeat center;
+    background: rgb(4,108,83);
+    background: radial-gradient(circle, rgba(4,108,83,1) 0%, rgba(10,60,48,1) 100%);
     background-size: cover;
     text-align: center;
 }
