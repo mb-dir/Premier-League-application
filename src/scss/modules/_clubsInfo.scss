@@ -1,6 +1,9 @@
 .clubsInfo{
     margin-top: 20px;
     min-height: 60vh;
+    &__introduction{
+        margin-top: 60px;
+    }
     &__clubName{
         font-size: $large;
         margin: .3em 0;
